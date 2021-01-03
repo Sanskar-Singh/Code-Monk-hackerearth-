@@ -1,0 +1,16 @@
+def minx(a,n):
+        c=[]
+        a.sort()
+        for j in range(n-1):
+                c.append(a[j]^a[j+1])
+        return min(c)
+
+
+def main():
+    T=int(input())
+    for i in range(T):
+        n=int(input())
+        a=list(map(int,input().split(' ')))
+        print(minx(a,n))
+
+main()
