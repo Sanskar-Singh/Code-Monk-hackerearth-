@@ -1,0 +1,23 @@
+for i in range(int(input())):
+    c = list(map(int, input().split(' ')))
+    a = list(map(int, input()))
+    bnum = bin(int(''.join(str(x) for x in a), base=2)).replace("0b", "").zfill(c[0])
+    num = bnum
+    p=num
+    m=c[0]-1
+    for j in range(c[0]):
+        num = num[-m:] + num[:-m]
+        if (num > bnum):
+            bnum = num
+    num=p
+    y=[]
+    for k in range(c[0]):
+        num = num[-m:] + num[:-m]
+        if (num==bnum):
+            y.append(k+1)
+    r=c[1]%len(y)     
+    if(c[1]<=len(y)):
+        print(y[r-1])
+    else:
+        print(y[r-1]+int((c[1]-r)/len(y))*c[0])
+
