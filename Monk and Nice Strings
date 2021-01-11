@@ -1,0 +1,7 @@
+T=int(input())
+ch=[]
+for i in range(T):
+    a=input()
+    ch.append(a)
+    ch.sort()
+    print(ch.index(a)
