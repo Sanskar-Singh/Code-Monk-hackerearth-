@@ -1,0 +1,16 @@
+def reverse(s): 
+  str = "" 
+  for i in s: 
+    str = i + str
+  return str
+c=input().split(' ')
+for i in range(len(c[0])):
+    ch=''
+    b=[]
+    for k,j in enumerate(reverse(c[0]),i):
+        ch=ch+j
+        b.append(reverse(ch))
+
+
+b.sort()
+print(b[int(c[1])-1])
