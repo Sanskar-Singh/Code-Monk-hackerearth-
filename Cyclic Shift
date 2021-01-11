@@ -19,5 +19,4 @@ for i in range(int(input())):
     if(c[1]<=len(y)):
         print(y[r-1])
     else:
-        print(y[r-1]+int((c[1]-r)/len(y))*c[0])
-
+        print(y[r-1]+int((c[1]-1)/len(y))*c[0])
